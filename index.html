@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Graduate Loan Process Navigator</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f6f3fb;
+      color: #222;
+    }
+
+    .header {
+      background: linear-gradient(90deg, #6f3ca5, #d94f9d);
+      color: white;
+      padding: 22px 30px;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+
+    .header p {
+      margin: 8px 0 0;
+      font-size: 14px;
+    }
+
+    .personalized-note {
+      font-size: 13px;
+      margin-top: 6px;
+      opacity: 0.9;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 950px;
+      margin: 25px auto;
+    }
+
+    .welcome {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    .profile-note {
+      font-size: 13px;
+      color: #666;
+      margin-bottom: 18px;
+    }
+
+    .progress-background {
+      background: #e6e6e6;
+      border-radius: 20px;
+      height: 22px;
+      overflow: hidden;
+      margin-top: 10px;
+    }
+
+    .progress-bar {
+      width: 50%;
+      height: 100%;
+      background: linear-gradient(90deg, #6f3ca5, #d94f9d);
+      color: white;
+      text-align: center;
+      font-size: 13px;
+      line-height: 22px;
+    }
+
+    .section-title {
+      margin-top: 28px;
+      margin-bottom: 12px;
+      color: #5a2f85;
+    }
+
+    .step {
+      background: white;
+      padding: 16px 18px;
+      margin-bottom: 10px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .step-title {
+      font-weight: bold;
+    }
+
+    .step p {
+      margin: 5px 0 0;
+      font-size: 13px;
+      color: #666;
+    }
+
+    .status {
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    .completed {
+      background: #e2f4e8;
+      color: #257a46;
+    }
+
+    .progress {
+      background: #fff2d8;
+      color: #a56a00;
+    }
+
+    .not-started {
+      background: #f0eaf7;
+      color: #6f3ca5;
+    }
+
+    .two-column {
+      display: flex;
+      gap: 18px;
+      margin-top: 20px;
+    }
+
+    .card {
+      flex: 1;
+      background: white;
+      padding: 18px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: #5a2f85;
+    }
+
+    .link {
+      background: #f5effb;
+      padding: 10px;
+      border-radius: 7px;
+      margin-bottom: 8px;
+      font-size: 14px;
+    }
+
+    .deadline {
+      background: #fff0f5;
+      border-left: 5px solid #d94f9d;
+      padding: 12px;
+      border-radius: 6px;
+    }
+
+    button {
+      background: #6f3ca5;
+      color: white;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 7px;
+      cursor: pointer;
+      margin-top: 8px;
+    }
+
+    button:hover {
+      background: #542876;
+    }
+
+    .footer {
+      text-align: center;
+      margin: 30px 0;
+      color: #777;
+      font-size: 12px;
+    }
+
+    @media(max-width: 700px) {
+      .two-column {
+        flex-direction: column;
+      }
+
+      .step {
+        align-items: flex-start;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="header">
+    <h1>Graduate Loan Process Navigator</h1>
+    <p>Track your loan steps, deadlines, forms, and progress in one place.</p>
+    <p class="personalized-note">
+      Personalized loan steps based on your student profile and loan type.
+    </p>
+  </div>
+
+  <div class="container">
+
+    <div class="welcome">
+      <h2>Welcome, John</h2>
+
+      <p>Your graduate loan process is currently in progress.</p>
+
+      <p class="profile-note">
+        The steps below are based on your student profile and selected loan type.
+      </p>
+
+      <strong>Overall Progress</strong>
+
+      <div class="progress-background">
+        <div class="progress-bar">3 of 6 Steps Completed</div>
+      </div>
+    </div>
+
+    <h2 class="section-title">Your Loan Steps</h2>
+
+    <div class="step">
+      <div>
+        <div class="step-title">1. Check Tuition Balance</div>
+        <p>Review your current tuition balance in Workday.</p>
+      </div>
+      <span class="status completed">Completed</span>
+    </div>
+
+    <div class="step">
+      <div>
+        <div class="step-title">2. Complete FAFSA</div>
+        <p>Submit your FAFSA through Federal Student Aid.</p>
+      </div>
+      <span class="status completed">Completed</span>
+    </div>
+
+    <div class="step">
+      <div>
+        <div class="step-title">3. Submit Graduate Loan Form</div>
+        <p>Complete the required WPI Graduate Student Loan Form.</p>
+      </div>
+      <span class="status completed">Completed</span>
+    </div>
+
+    <div class="step">
+      <div>
+        <div class="step-title">4. Review Loan Eligibility</div>
+        <p>Check your loan eligibility and respond to any Financial Aid requests.</p>
+      </div>
+      <span class="status progress">In Progress</span>
+    </div>
+
+    <div class="step">
+      <div>
+        <div class="step-title">5. Sign Master Promissory Note</div>
+        <p>Complete the required federal loan agreement.</p>
+      </div>
+      <span class="status not-started">Not Started</span>
+    </div>
+
+    <div class="step">
+      <div>
+        <div class="step-title">6. Confirm Disbursement & Refund</div>
+        <p>Verify loan disbursement and complete refund or direct deposit steps if needed.</p>
+      </div>
+      <span class="status not-started">Not Started</span>
+    </div>
+
+    <div class="two-column">
+
+      <div class="card">
+        <h3>Upcoming Deadline</h3>
+
+        <div class="deadline">
+          Complete your remaining loan requirements before the tuition payment due date.
+        </div>
+
+        <button>View Deadlines</button>
+      </div>
+
+      <div class="card">
+        <h3>Forms & Resources</h3>
+
+        <div class="link">FAFSA</div>
+        <div class="link">WPI Graduate Student Loan Form</div>
+        <div class="link">Federal Student Aid</div>
+        <div class="link">Loan Provider Website</div>
+      </div>
+
+    </div>
+
+    <div class="card" style="margin-top:20px;">
+      <h3>Need Help?</h3>
+
+      <p>
+        Have questions about your loan status, forms, or next steps?
+        Contact the WPI Office of Financial Aid.
+      </p>
+
+      <button>Get Help</button>
+    </div>
+
+    <div class="footer">
+      Graduate Loan Process Navigator — UX Mockup
+    </div>
+
+  </div>
+
+</body>
+</html>
